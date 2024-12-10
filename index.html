@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>Addressing Diverging Training Costs using BEVRestore for High-resolution Bird’s Eye View Map Construction</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -56,24 +56,23 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Minsu Kim</a><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Giseop Kim</a><sup>2</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Sunwook Choi</a><sup>2</sup>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">Korea Institute of Science and Technology (KIST)<br>NAVER LABS<br>Robotics and Automation Letters (RA-L)</span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10705078?casa_token=yMY38ypFNZsAAAAA:DAMqqjhhNPwt1H_8n2pE3fjZO6KbolRrEoi-lmUTXR9e3cf_HJDSHFSYERF3mIE3cI5L1f2-rQ" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -82,20 +81,9 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/minshu-kim/BEVRestore" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -106,7 +94,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2405.01016" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -148,7 +136,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Recent advancements in Bird's Eye View (BEV) fusion for map construction have demonstrated remarkable mapping of urban environments. However, their deep and bulky architecture incurs substantial amounts of backpropagation memory and computing latency. Consequently, the problem poses an unavoidable bottleneck in constructing high-resolution (HR) BEV maps, as their large-sized features cause significant increases in costs including GPU memory consumption and computing latency, named diverging training costs issue. Affected by the problem, most existing methods adopt low-resolution (LR) BEV and struggle to estimate the precise locations of urban scene components like road lanes, and sidewalks. As the imprecision leads to risky motion planning like collision avoidance, the diverging training costs issue has to be resolved. In this letter, we address the issue with our novel BEVRestore mechanism. Specifically, our proposed model encodes the features of each sensor to LR BEV space and restores them to HR space to establish a memory-efficient map constructor. To this end, we introduce the BEV restoration strategy, which restores aliasing, and blocky artifacts of the up-scaled BEV features, and narrows down the width of the labels. Our extensive experiments show that the proposed mechanism provides a plug-and-play, memory-efficient pipeline, enabling an HR map construction with a broad BEV scope.
           </p>
         </div>
       </div>
@@ -278,11 +266,16 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@article{kim2024addressing,
+        title={Addressing Diverging Training Costs Using BEVRestore for High-Resolution Bird's Eye View Map Construction},
+        author={Kim, Minsu and Kim, Giseop and Choi, Sunwook},
+        journal={IEEE Robotics and Automation Letters},
+        year={2024},
+        publisher={IEEE}
+      }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
-
 
   <footer class="footer">
   <div class="container">
