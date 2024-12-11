@@ -131,7 +131,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-fullwidth">
         <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified" style="margin-bottom: -20px; max-width: 75%; margin-left: auto; margin-right: auto;">
+        <div class="content has-text-justified" style="margin-bottom: -20px; max-width: 90%; margin-left: auto; margin-right: auto;">
           <p>
             Recent advancements in Bird's Eye View (BEV) fusion for map construction have demonstrated remarkable mapping of urban environments. However, their deep and bulky architecture incurs substantial amounts of backpropagation memory and computing latency. Consequently, the problem poses an unavoidable bottleneck in constructing high-resolution (HR) BEV maps, as their large-sized features cause significant increases in costs including GPU memory consumption and computing latency, named diverging training costs issue. Affected by the problem, most existing methods adopt low-resolution (LR) BEV and struggle to estimate the precise locations of urban scene components like road lanes, and sidewalks. As the imprecision leads to risky motion planning like collision avoidance, the diverging training costs issue has to be resolved. In this letter, we address the issue with our novel BEVRestore mechanism. Specifically, our proposed model encodes the features of each sensor to LR BEV space and restores them to HR space to establish a memory-efficient map constructor. To this end, we introduce the BEV restoration strategy, which restores aliasing, and blocky artifacts of the up-scaled BEV features, and narrows down the width of the labels. Our extensive experiments show that the proposed mechanism provides a plug-and-play, memory-efficient pipeline, enabling an HR map construction with a broad BEV scope.
           </p>
@@ -167,7 +167,7 @@
 
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container has-text-centered" style="margin-bottom: 40px">
+    <div class="container has-text-centered" style="margin-top: 20px; margin-bottom: 20px">
       <h2 class="title is-3">Experimental Results</h2>
       <div class="item">
         <img src="static/images/tables.png" alt="Example table showing statistical data" style="width: 75%; max-width: 100%;" />
