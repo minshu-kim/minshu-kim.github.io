@@ -113,31 +113,21 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body" 
-         style="display: flex; justify-content: center; align-items: center; gap: 5%; flex-wrap: wrap; height: 45vh;">
-      <img src="static/videos/bevrestore.gif" alt="BEVRestore animation" 
-           style="max-height: 100%; max-width: 45%; width: auto; object-fit: contain;">
-      <img src="static/images/fig1.png" alt="Teaser animation" 
-           style="max-height: 100%; max-width: 45%; width: auto; object-fit: contain;">
+         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)); gap: 5%; height: 45vh; align-items: center;">
+      <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+        <img src="static/videos/bevrestore.gif" alt="BEVRestore animation" 
+             style="max-height: 100%; width: auto; object-fit: contain;">
+      </div>
+      <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+        <img src="static/images/fig1.png" alt="Teaser animation" 
+             style="max-height: 100%; width: auto; object-fit: contain;">
+      </div>
     </div>
     <h2 class="subtitle has-text-centered" style="margin-top: -40px; margin-bottom: 40px">
       (Left) We introduce BEVRestore, a plug-and-play restoration mechanism of bird's eye view features for (Right) costly efficient but fine-grained high-resolution (HR) BEV map construction.
     </h2>
   </div>
 </section>
-
-<!-- Teaser video
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body" style="display: flex; justify-content: center; align-items: stretch; gap: 5%; flex-wrap: wrap;">
-      <img src="static/videos/bevrestore.gif" alt="BEVRestore animation" style="max-height: 45vh; max-width: 45%; width: 100%; object-fit: contain; margin-top: -10px;">
-      <img src="static/images/fig1.png" alt="Teaser animation" style="max-height: 45vh; max-width: 45%; width: 100%; object-fit: contain; margin-top: -10px;">
-    </div>
-    <h2 class="subtitle has-text-centered" style="margin-top: -40px; margin-bottom: 40px">
-      (Left) We introduce BEVRestore, a plug-and-play restoration mechanism of bird's eye view features for (Right) costly efficient but fine-grained high-resolution (HR) BEV map construction.
-    </h2>
-  </div>
-</section>
-End teaser video -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
