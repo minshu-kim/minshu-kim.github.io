@@ -3,7 +3,7 @@ body {
   font-size: 20px;
   line-height: 1.6;
   color: #d6dce8;
-  background: #2d3037;
+  background: #22232a;
   margin: 0;
 }
 
@@ -66,7 +66,7 @@ p {
 }
 
 a {
-  color: #7cb7ff;
+  color: #65c1fa;
   text-decoration: none;
 }
 
