@@ -110,69 +110,78 @@ a:hover {
 
 @media (max-width: 760px) {
   body {
-    font-size: clamp(13px, 1.6vw, 20px);
+    font-size: calc(1.6vw - 0.576px); /* 20 / 1250 */
   }
 
   .container {
     width: calc(100vw - 36px);
     max-width: none;
-    margin: 28px auto;
+    margin: calc(3.2vw - 1.152px) auto; /* 40 / 1250 */
   }
 
   .intro {
-    grid-template-columns: 24% 1fr; /* 300 / 1250 */
-    gap: 2%;                       /* 25 / 1250 */
+    grid-template-columns: calc(24vw - 8.64px) 1fr; /* 300 / 1250 */
+    gap: calc(2vw - 0.72px);                       /* 25 / 1250 */
     align-items: start;
-    margin-bottom: clamp(28px, 5.6vw, 70px);
+    margin-bottom: calc(5.6vw - 2.016px);          /* 70 / 1250 */
   }
 
   .profile-img {
-    width: 95%;       /* 285 / 300 */
+    width: 95%; /* 285 / 300 */
     max-width: none;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
   }
 
   h1 {
-    font-size: clamp(24px, 3.36vw, 42px);
+    font-size: calc(3.36vw - 1.2096px); /* 42 / 1250 */
     line-height: 1.15;
-    margin: 0 0 clamp(12px, 1.6vw, 20px) 0;
+    margin: 0 0 calc(1.6vw - 0.576px) 0; /* 20 / 1250 */
   }
 
   h2 {
-    font-size: clamp(24px, 2.88vw, 36px);
+    font-size: calc(3.36vw - 1.2096px); /* PC h2 = 42px */
     line-height: 1.2;
-    padding-bottom: clamp(8px, 0.96vw, 12px);
-    margin: 0 0 clamp(24px, 2.88vw, 36px) 0;
+    padding-bottom: calc(0.96vw - 0.3456px); /* 12 / 1250 */
+    margin: 0 0 calc(2.88vw - 1.0368px) 0;  /* 36 / 1250 */
   }
 
   h3 {
-    font-size: clamp(14px, 1.6vw, 20px);
+    font-size: calc(1.6vw - 0.576px); /* 20 / 1250 */
     line-height: 1.35;
-    margin: 0 0 8px 0;
+    margin: 0 0 calc(0.64vw - 0.2304px) 0; /* 8 / 1250 */
   }
 
   p {
-    margin: 8px 0;
+    margin: calc(0.64vw - 0.2304px) 0; /* 8 / 1250 */
   }
 
   .links {
-    font-size: clamp(14px, 1.6vw, 20px);
-    margin-top: clamp(10px, 1.12vw, 14px);
+    font-size: calc(1.6vw - 0.576px); /* 20 / 1250 */
+    margin-top: calc(1.12vw - 0.4032px); /* 14 / 1250 */
   }
 
   .paper {
-    grid-template-columns: 28.8% 1fr; /* 360 / 1250 */
-    gap: 4%;                          /* 50 / 1250 */
-    margin: clamp(28px, 3.36vw, 42px) 0;
+    grid-template-columns: calc(28.8vw - 10.368px) 1fr; /* 360 / 1250 */
+    gap: calc(4vw - 1.44px);                            /* 50 / 1250 */
+    margin: calc(3.36vw - 1.2096px) 0;                  /* 42 / 1250 */
     align-items: start;
   }
 
   .paper-img-box {
-    width: 100%;
+    width: 104.166666%; /* 375 / 360: PC에서 column은 360px인데 box는 375px */
     max-width: none;
+    aspect-ratio: 16 / 9;
+  }
+
+  .paper-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   .paper p {
-    font-size: clamp(14px, 1.84vw, 23px);
-    margin: 4px 0;
+    font-size: calc(1.84vw - 0.6624px); /* 23 / 1250 */
+    margin: calc(0.32vw - 0.1152px) 0;  /* 4 / 1250 */
   }
 }
