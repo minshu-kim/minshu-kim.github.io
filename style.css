@@ -1,6 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(17px, 1.2vw, 21px);
+  font-size: 20px;
   line-height: 1.6;
   color: #222;
   background: #fff;
@@ -8,50 +8,58 @@ body {
 }
 
 .container {
-  max-width: 1180px;
+  width: 1250px;
+  max-width: calc(100vw - 48px);
   margin: 40px auto;
-  padding: 0 clamp(18px, 4vw, 40px);
 }
 
+/* Top profile section */
 .intro {
   display: grid;
-  grid-template-columns: 340px 1fr;
-  gap: clamp(32px, 6vw, 90px);
+  grid-template-columns: 300px 1fr;
+  gap: 25px;
   align-items: start;
+  margin-bottom: 70px;
 }
 
 .profile-img {
-  width: 100%;
-  max-width: 340px;
+  width: 285px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
   border-radius: 6px;
-  margin-top: 12px;
+}
+
+.intro-text {
+  min-width: 0;
 }
 
 h1 {
-  font-size: clamp(34px, 4vw, 45px);
-  margin-top: 0;
-  margin-bottom: 0;
+  font-size: 42px;
+  line-height: 1.15;
+  margin: 0 0 20px 0;
 }
 
 h2 {
-  font-size: clamp(32px, 3.5vw, 45px);
+  font-size: 42px;
+  line-height: 1.2;
   border-bottom: 1px solid #ddd;
-  padding-bottom: 8px;
-  margin-top: 44px;
+  padding-bottom: 12px;
+  margin: 0 0 36px 0;
 }
 
 h3 {
-  font-size: clamp(20px, 1.5vw, 24px);
+  font-size: 20px;
+  line-height: 1.35;
   margin: 0 0 8px 0;
 }
 
-.paper p {
-  margin: 4px 0;
+p {
+  margin: 8px 0;
 }
 
 .links {
-  font-size: clamp(18px, 1.5vw, 25px);
-  margin-top: 4px;
+  font-size: 20px;
+  margin-top: 14px;
 }
 
 a {
@@ -63,17 +71,17 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Publication section */
 .paper {
   display: grid;
-  grid-template-columns: 350px 1fr;
-  gap: clamp(28px, 5vw, 65px);
-  margin: 32px 0;
+  grid-template-columns: 360px 1fr;
+  gap: 50px;
+  margin: 42px 0;
   align-items: start;
 }
 
 .paper-img-box {
-  width: 100%;
-  max-width: 350px;
+  width: 375px;
   aspect-ratio: 16 / 9;
   background: #fff;
   border: 1px solid #ddd;
@@ -91,44 +99,80 @@ a:hover {
   object-fit: contain;
 }
 
-@media (max-width: 800px) {
+.paper-info {
+  min-width: 0;
+}
+
+.paper p {
+  font-size: 23px;
+  margin: 4px 0;
+}
+
+@media (max-width: 760px) {
+  body {
+    font-size: clamp(13px, 1.6vw, 20px);
+  }
+
   .container {
+    width: calc(100vw - 36px);
+    max-width: none;
     margin: 28px auto;
-    padding: 0 22px;
   }
 
   .intro {
-    grid-template-columns: 1fr;
-    gap: 24px;
+    grid-template-columns: 24% 1fr; /* 300 / 1250 */
+    gap: 2%;                       /* 25 / 1250 */
+    align-items: start;
+    margin-bottom: clamp(28px, 5.6vw, 70px);
   }
 
   .profile-img {
-    width: 70%;
-    max-width: 260px;
-    margin-top: 0;
+    width: 95%;       /* 285 / 300 */
+    max-width: none;
   }
 
   h1 {
-    font-size: 36px;
+    font-size: clamp(24px, 3.36vw, 42px);
+    line-height: 1.15;
+    margin: 0 0 clamp(12px, 1.6vw, 20px) 0;
   }
 
   h2 {
-    font-size: 32px;
-    margin-top: 36px;
+    font-size: clamp(24px, 2.88vw, 36px);
+    line-height: 1.2;
+    padding-bottom: clamp(8px, 0.96vw, 12px);
+    margin: 0 0 clamp(24px, 2.88vw, 36px) 0;
+  }
+
+  h3 {
+    font-size: clamp(14px, 1.6vw, 20px);
+    line-height: 1.35;
+    margin: 0 0 8px 0;
+  }
+
+  p {
+    margin: 8px 0;
   }
 
   .links {
-    font-size: 18px;
+    font-size: clamp(14px, 1.6vw, 20px);
+    margin-top: clamp(10px, 1.12vw, 14px);
   }
 
   .paper {
-    grid-template-columns: 1fr;
-    gap: 14px;
-    margin: 30px 0;
+    grid-template-columns: 28.8% 1fr; /* 360 / 1250 */
+    gap: 4%;                          /* 50 / 1250 */
+    margin: clamp(28px, 3.36vw, 42px) 0;
+    align-items: start;
   }
 
   .paper-img-box {
     width: 100%;
-    max-width: 100%;
+    max-width: none;
+  }
+
+  .paper p {
+    font-size: clamp(14px, 1.84vw, 23px);
+    margin: 4px 0;
   }
 }
