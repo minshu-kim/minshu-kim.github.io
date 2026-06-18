@@ -111,6 +111,15 @@ a:hover {
   margin: 4px 0;
 }
 
+.awards-list {
+  margin-top: 12px;
+  padding-left: 28px;
+}
+
+.awards-list li {
+  margin-bottom: 4px;
+}
+
 @media (max-width: 760px) {
   body {
     font-size: calc(1.6vw - 0.576px); /* 20 / 1250 */
